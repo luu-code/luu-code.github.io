@@ -16,11 +16,11 @@
 
 ## => Site Settings
 ##############################
-url: https://tianqi.name
+url: https://luu-code.name
 baseurl: /
-title: Qi's Site
+title: luu-code's Site
 description: >
-    Tian Qi's Site | 田琦的小站
+    luu-code's Site | 逯的小站
 
 
 ## => Language and Timezone
@@ -32,18 +32,14 @@ timezone: Asia/Shanghai
 ## => Author and Social
 ##############################
 author:
-  name: Tian Qi
-  email: kitian616@outlook.com
-  twitter: kitian616
-  github:  kitian616
-  googleplus: 101827554735084402671
-  weibo: 234695683
-  douban: kitian616
+  name: Lu ChangXin
+  email: 1963176498@qq.com
+  github:  luu-code
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: kitian616/kitian616.github.io
+repository: luu-code/luu-code.github.io
 repository_tree: master
 
 
@@ -76,7 +72,7 @@ paginate_path: /blog/page:num
 comments:
   provider: disqus
   disqus:
-    shortname: kitian616-github-io
+    shortname: luu-code-github-io
 
 
 ## => Pageview
