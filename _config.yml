@@ -14,107 +14,60 @@
 
 
 
-## => Site Settings
+## => Site Settings (核心修正)
 ##############################
-url: https://luu-code.name
-baseurl: /
-title: luu-code's Site
-description: >
-    luu-code's Site | 逯的小站
-
+url: https://luu-code.github.io  # 必须改成你的 GitHub Pages 域名
+baseurl: "/"                     # 保持双引号，避免解析错误
+title: "luu-code"       # 中文标题（加引号防乱码）
+description: "记录嵌入式 Linux 实践" # 详细描述，利于 SEO
 
 ## => Language and Timezone
 ##############################
-lang: zh
+lang: zh-CN                     # 完整语言代码（比 "zh" 更准确）
 timezone: Asia/Shanghai
 
-
-## => Author and Social
+## => Author and Social (安全版)
 ##############################
 author:
-  name: Lu ChangXin
-  email: 1963176498@qq.com
-  github:  luu-code
+  name: "逯长鑫"                # 用引号包裹中文
+  email: "1963176498@qq.com"   # 你的邮箱
+  github: "luu-code"            # 你的 GitHub 用户名
 
-
-## => GitHub Repository (if the site is hosted by GitHub)
+## => GitHub Repository (关键修正)
 ##############################
 repository: luu-code/luu-code.github.io
-repository_tree: master
+repository_tree: main           # GitHub 新仓库默认分支是 main
 
+## => 关闭高风险服务（先保证安全）
+##############################
+comments:
+  provider: false               # 先关闭评论，等博客稳定后再注册自己的 Disqus
+pageview:
+  provider: false               # 先关闭统计，避免泄露凭证
+analytics:
+  provider: false               # 先关闭 Google Analytics
 
-## => Paths
+## => 其他保持默认（无需修改）
 ##############################
 paths:
   root: /
   home: /blog
   archive: /blog/archive.html
-  rss:  /feed.xml
+  rss: /feed.xml
 
-
-## => Post
-##############################
-## excerpt
 excerpt_separator: <!--more-->
-
-## license
 license: CC-BY-4.0
-
-
-## => Paginate
-##############################
 paginate: 7
 paginate_path: /blog/page:num
 
-
-## => Comments
-##############################
-comments:
-  provider: disqus
-  disqus:
-    shortname: luu-code-github-io
-
-
-## => Pageview
-##############################
-pageview:
-  provider: leancloud
-  leancloud:
-    app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
-    app_key: Mzf5m9skSwYVWVXhGiYMNyXs
-    app_class: ThomasBlog
-
-
-## => Analytics
-##############################
-analytics:
-  provider: google
-  google:
-    tracking_id: UA-71907556-1
-
-
-## => Build
-##############################
 markdown: kramdown
 highlighter: rouge
 permalink: date
 
 exclude:
-  - CHANGELOG.md
-  - CHECKLIST.md
   - Gemfile
   - Gemfile.lock
-  - LICENSE
-  - README-*.md
   - README.md
-  - gulpfile.js
-  - jekyll-text-theme.gemspec
-  - package-lock.json
-  - package.json
-  - /docs
-  - /node_modules
-  - /screenshots
-  - /test
   - /vendor
 
 defaults:
@@ -123,16 +76,9 @@ defaults:
       type: posts
     values:
       layout: article
-      license: true
       aside:
         toc: true
-      show_edit_on_github: true
-      show_subscribe: true
-      pageview: true
 
-
-## => Plugins
-##############################
 plugins:
   - jekyll-sitemap
   - jekyll-feed
