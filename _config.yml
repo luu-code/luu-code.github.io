@@ -1,0 +1,92 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+#
+# ,--------.      ,--.   ,--. ,--.
+# '--.  .--',---.  \  `.'  /,-'  '-.
+#    |  |  | .-. :  .'    \ '-.  .-'
+#    |  |  \   --. /  .'.  \  |  |
+#    `--'   `----''--'   '--' `--'
+
+
+
+
+## => Site Settings 
+##############################
+url: https://luu-code.github.io  # 必须改成你的 GitHub Pages 域名
+baseurl: "/"                     # 保持双引号，避免解析错误
+title: "luu-code"       # 中文标题（加引号防乱码）
+description: "记录嵌入式 Linux 实践" # 详细描述，利于 SEO
+
+## => Language and Timezone
+##############################
+lang: zh-CN                     # 完整语言代码（比 "zh" 更准确）
+timezone: Asia/Shanghai
+
+## => Author and Social 
+##############################
+author:
+  name: "逯长鑫"                # 用引号包裹中文
+  email: "1963176498@qq.com"   # 你的邮箱
+  github: "luu-code"            # 你的 GitHub 用户名
+
+## => GitHub Repository 
+##############################
+repository: luu-code/luu-code.github.io
+repository_tree: main           # GitHub 新仓库默认分支是 main
+
+## => 关闭高风险服务
+##############################
+comments:
+  provider: false               # 先关闭评论，等博客稳定后再注册自己的 Disqus
+pageview:
+  provider: false               # 先关闭统计，避免泄露凭证
+analytics:
+  provider: false               # 先关闭 Google Analytics
+
+## => 其他保持默认
+##############################
+paths:
+  root: /
+  home: /blog
+  archive: /blog/archive.html
+  rss: /feed.xml
+
+excerpt_separator: <!--more-->
+license: CC-BY-4.0
+paginate: 7
+paginate_path: /blog/page:num
+
+markdown: kramdown
+highlighter: rouge
+permalink: date
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - /vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+      aside:
+        toc: true
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  - jemoji
+
+
+## => Server
+##############################
+server_url: "0.0.0.0"
+port: 4001
